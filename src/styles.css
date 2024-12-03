@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Major+Mono+Display&display=swap');
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-base: #f2f7fc;
+    --color-mantle: #f7fafd;
+    --color-text: #1e1e1e;
+    --color-inputs: #f9fcff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: #0c141a;
+    --color-mantle: #0c141a;
+    --color-text: #efefef;
+    --color-inputs: #1c242a;
+  }
+}
+
+:root,
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0;
+  margin: 0;
+
+  background: var(--color-base);
+
+  font-family: 'Major Mono Display', Menlo, Monaco, 'Courier New', monospace;
+
+  color: var(--color-text);
+
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.root-div {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+
+  overflow: scroll;
+}
+
+input,
+button {
+  background: var(--color-inputs);
+
+  border: 1px solid var(--color-mantle);
+
+  color: var(--color-text);
+
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+
+  text-transform: uppercase;
+}
+
+input[type='color'] {
+  cursor: pointer;
+}
+
+button {
+  padding: 0.5rem 1rem;
+
+  cursor: pointer;
+}

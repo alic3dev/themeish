@@ -61,7 +61,7 @@
   .title-header:focus,
   .title-header:hover {
     text-decoration: none;
-    color: #eaefff;
+    color: var(--color-text);
   }
 
   .title-header:hover,
