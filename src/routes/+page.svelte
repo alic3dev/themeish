@@ -196,7 +196,7 @@ ${colors.map((color: Color): string => `${color.secondaryName ? `# ${color.secon
   </div>
 
   <div class="color-fields-container">
-    <div>
+    <div class="controls">
       <button on:click={onExportClicked}>Export</button>
       <button on:click={resetColors}>Reset</button>
     </div>
@@ -279,7 +279,19 @@ ${colors.map((color: Color): string => `${color.secondaryName ? `# ${color.secon
   }
 
   .color-fields-container {
-    padding: 1rem 0;
+    padding: 0;
+    padding-bottom: 0.5rem;
+
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+  }
+
+  .controls {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+
+    background: rgba(0, 0, 0, 0.0125);
+
+    border: 1px solid var(--color-text);
   }
 
   .color-field {
@@ -335,6 +347,9 @@ ${colors.map((color: Color): string => `${color.secondaryName ? `# ${color.secon
       min-width: 0px;
       width: 100vw;
       max-width: 10px;
+
+      font-size: 0.9rem;
+      text-transform: uppercase;
 
       overflow: hidden;
       text-overflow: ellipsis;
